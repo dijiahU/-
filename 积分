@@ -1,0 +1,16 @@
+
+function = input("f(x):")
+a = int(input("起点:"))
+b = int(input("终点:")) 
+step = float(input("步:"))
+def f(x):
+	f = eval(function)
+	return f
+def answer(function, a, b, step):
+    result = 0; dx = (b - a)/step
+    while a < b:
+        result += f(a + dx/2)*dx
+        
+        a += dx
+    return result
+print(answer(function, a, b, step))
